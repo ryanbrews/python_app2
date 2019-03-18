@@ -1,0 +1,4 @@
+DEBUG = True
+SQLALCHEMY_DATABASE_URI = 'postgresql://ryan:123456@postgres:5432/ryanpy'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+SECRET_KEY = 'sayaryan'
