@@ -5,7 +5,6 @@ from flask_admin.contrib.sqla import ModelView
 from web_app.models import db, Page, Menu
 from web_app.views import PageModelView
 
-
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('settings.py')
@@ -19,6 +18,7 @@ def create_app():
     @app.route('/')
     @app.route('/<url>')
     def index(url=None):
+        global page
         if url is not None:
             page = Page.query.filter_by(url=url).first()
 
